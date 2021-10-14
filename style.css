@@ -10,3 +10,18 @@
 section {
   padding-top: 5rem;
 }
+
+.body {
+  margin: 3%;
+  margin-top: 0;
+}
+
+div .petunjuk {
+  background-color: aqua;
+  padding: 5%;
+}
+
+h1,
+h4 {
+  text-align: center;
+}
