@@ -73,7 +73,7 @@
         font-weight: 600;
         padding-bottom: 5px;
         color: #333;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px transparent;
         transition: 0.5s all;
       }
       .mainMenu ul li a:hover {
@@ -84,23 +84,23 @@
         padding: 1px;
         border-radius: 10px;
       }
-      .left div ul li {
+      .left div div li {
         list-style: none;
         display: inline;
         padding-bottom: 5px;
       }
 
-      .left div ul li a {
+      .left div div li a {
         font-weight: 600;
-        padding-left: 10px;
+        margin-left: 8px;
         color: #333;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px transparent;
         transition: 0.5s all;
       }
-      .left div ul li a:hover {
+      .left div div li a:hover {
         border-bottom: 5px solid #eaeaea;
       }
-      .left div ul li ul {
+      .left div div li ul {
         background-color: #fff;
         z-index: 99999;
         position: absolute;
@@ -108,10 +108,10 @@
         display: inline-block;
         padding-top: 5px;
       }
-      .left div ul li ul li {
+      .left div div li ul li {
         padding: 0;
       }
-      .left div ul li:hover ul {
+      .left div div li:hover ul {
         left: auto;
       }
 
@@ -145,10 +145,10 @@
                 onclick="myFunction0()"
                 >[=]</a
               >
-              <ul id="icon" class="w3-hide w3-hide-large w3-hide-medium">
-                <li><a href="#" class="">About Me</a></li>
+              <div id="icon" class="w3-hide w3-hide-large w3-hide-medium">
+                <li><a href="#" class="w3-bar-item">About Me</a></li>
                 <li>
-                  <a href="#" class="">More</a>
+                  <a href="#" class="w3-bar-item">More</a>
                   <ul class="w3-bar-block">
                     <li>
                       <a href="#blog" class="w3-bar-item w3-button">Tutorial</a>
@@ -158,7 +158,7 @@
                     </li>
                   </ul>
                 </li>
-              </ul>
+              </div>
             </div>
             <div class="logo">
               <a href="#">Ramanto Ne leh</a>
