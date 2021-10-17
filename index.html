@@ -11,6 +11,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="content.css" />
+    <link rel="stylesheet" href="header.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -25,107 +26,34 @@
       });
     </script>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
-      }
-      header {
-        background-color: rgba(255, 255, 255, 0.411);
-      }
-      .menu {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      a {
-        text-decoration: none;
-      }
-
-      .mainMenu {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        padding-bottom: 13px;
-        padding-top: 13px;
-      }
-      .mainMenu .logo {
-        padding-right: 0;
-      }
-      .mainMenu .logo a {
-        font-size: 20px;
-        font-weight: 700;
-        color: #000000;
-      }
-      .mainMenu .left {
-        display: flex;
-      }
-      .mainMenu ul {
-        display: flex;
-      }
-      .mainMenu ul li {
-        list-style: none;
-        padding: 0 10px;
-      }
-
-      .mainMenu ul li a {
-        font-size: 15;
-        font-weight: 600;
-        padding-bottom: 5px;
-        color: #333;
-        border-bottom: 2px transparent;
-        transition: 0.5s all;
-      }
-      .mainMenu ul li a:hover {
-        border-bottom: 5px solid #eaeaea;
-      }
-
-      .left div div li {
-        list-style: none;
-        display: inline;
-        padding-bottom: 5px;
-      }
-
-      .left div div li a {
-        font-weight: 600;
-        margin-left: 8px;
-        color: #333;
-        border-bottom: 2px transparent;
-        transition: 0.5s all;
-      }
-      .left div div li a:hover {
-        border-bottom: 5px solid #eaeaea;
-      }
-      .left div div li ul {
+      .search #input {
         background-color: #fff;
-        z-index: 99999;
+        border: 0;
         position: absolute;
-        left: -999em;
-        display: inline-block;
-        padding-top: 5px;
+        padding-left: 15px;
+        margin-top: 4px;
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        transition: width 0.3s ease;
       }
-      .left div div li ul li {
-        padding: 0;
-      }
-      .left div div li:hover ul {
-        left: auto;
-      }
-
-      .mainMenu ul ul {
-        background-color: #fff;
-        z-index: 99999;
+      .btn {
+        background-color: #eaeaea;
+        border: 0;
+        cursor: pointer;
         position: absolute;
-        left: -999em;
-        display: block;
-        padding-top: 5px;
+        transition: transform 0.3s ease;
       }
-      .mainMenu ul ul li {
-        padding: 0;
+      .btn:focus,
+      #input:focus {
+        outline: none;
       }
-      .mainMenu ul li:hover ul {
-        left: auto;
+      .search.active #input {
+        margin-left: 50px;
+        width: 200px;
+      }
+      .search.active .btm {
+        transform: translateX(198px);
       }
     </style>
   </head>
@@ -187,14 +115,20 @@
     <!--navbar subMenu-->
 
     <nav class="subMenu" style="z-index: 9999; right: 0">
-      <div class="w3-bar" style="background-color: #eaeaea">
+      <div class="w3-bar" style="overflow: hidden; background-color: #e7e7e7">
         <a href="#sTop" class="w3-bar-item w3-button">Home</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small">Web</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small">Blog</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small">Contact Me</a>
-        <a href="#" class="w3-bar-item w3-button"
+        <!--<a href="#" class="w3-bar-item w3-button"
           ><i class="fa fa-search"></i
-        ></a>
+        ></a>-->
+        <div class="search">
+          <input type="search" name="cari" id="input" placeholder="Search..." />
+          <button class="btn w3-button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
         <a
           href="javascript:void(0)"
           class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
@@ -247,6 +181,7 @@
 
     <!--javascript-->
 
+    <script src="js/search.js"></script>
     <script>
       function myFunction0() {
         var x = document.getElementById("icon");
