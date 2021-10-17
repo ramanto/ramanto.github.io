@@ -52,7 +52,7 @@ a {
   transition: 0.5s all;
 }
 .mainMenu ul li a:hover {
-  border-bottom: 5px solid #eaeaea;
+  border-bottom: 5px solid #e7e7e7;
 }
 
 .left div div li {
@@ -69,7 +69,7 @@ a {
   transition: 0.5s all;
 }
 .left div div li a:hover {
-  border-bottom: 5px solid #eaeaea;
+  border-bottom: 5px solid #e7e7e7;
 }
 .left div div li ul {
   background-color: #fff;
