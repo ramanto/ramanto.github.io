@@ -7,6 +7,8 @@
     <meta name="description" content="portofolio and everything" />
     <meta name="Ramanto" content="ramanto" />
     <title>Ramanto | Site</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="content.css" />
     <link
@@ -27,6 +29,9 @@
         box-sizing: border-box;
         font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
+      }
+      header {
+        background-color: #fff;
       }
       .menu {
         max-width: 1200px;
@@ -79,23 +84,23 @@
         padding: 1px;
         border-radius: 10px;
       }
-      .left div div li {
+      .left div ul li {
         list-style: none;
         display: inline;
         padding-bottom: 5px;
       }
 
-      .left div div li a {
+      .left div ul li a {
         font-weight: 600;
         padding-left: 10px;
         color: #333;
         border-bottom: 2px solid #fff;
         transition: 0.5s all;
       }
-      .left div div li a:hover {
+      .left div ul li a:hover {
         border-bottom: 5px solid #eaeaea;
       }
-      .left div div li ul {
+      .left div ul li ul {
         background-color: #fff;
         z-index: 99999;
         position: absolute;
@@ -103,10 +108,10 @@
         display: inline-block;
         padding-top: 5px;
       }
-      .left div div li ul li {
+      .left div ul li ul li {
         padding: 0;
       }
-      .left div div li:hover ul {
+      .left div ul li:hover ul {
         left: auto;
       }
 
@@ -140,7 +145,7 @@
                 onclick="myFunction0()"
                 >[=]</a
               >
-              <div id="icon" class="w3-hide w3-hide-large w3-hide-medium">
+              <ul id="icon" class="w3-hide w3-hide-large w3-hide-medium">
                 <li><a href="#" class="">About Me</a></li>
                 <li>
                   <a href="#" class="">More</a>
@@ -153,7 +158,7 @@
                     </li>
                   </ul>
                 </li>
-              </div>
+              </ul>
             </div>
             <div class="logo">
               <a href="#">Ramanto Ne leh</a>
@@ -172,7 +177,7 @@
                 </li>
               </ul>
             </li>
-            <li><a style="margin-left: 0" href="#">Log In</a></li>
+            <li><a href="#">Log In</a></li>
           </ul>
         </div>
       </div>
@@ -214,7 +219,8 @@
 
     <div class="content">
       <div><h1>Comming Soon</h1></div>
-      <p style="font-size: 50px">
+      <p class="welcome">WELCOME TO MY WEBSITE</p>
+      <p class="tulisan" style="font-size: 20px">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, eligendi.
         Quo, dolorum eaque nostrum quasi maxime suscipit nesciunt sapiente ullam
         architecto debitis, harum, maiores voluptatem perferendis necessitatibus

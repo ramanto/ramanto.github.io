@@ -1,3 +1,7 @@
+body {
+  background-image: url(home.jpg);
+}
+
 .content {
   margin-left: 5%;
   margin-right: 5%;
@@ -15,4 +19,21 @@
   align-items: center;
   padding: 10px;
   background-color: rgba(185, 44, 44, 0.541);
+}
+
+.content .welcome {
+  background-color: rgba(255, 255, 255, 0.479);
+  padding: 25px;
+  border-radius: 40px;
+  margin: auto;
+  margin-bottom: 100px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 60px;
+  color: rgba(0, 17, 255, 0.363);
+}
+.content .tulisan {
+  background-color: rgba(255, 255, 255, 0.479);
+  padding: 25px;
+  border-radius: 20px;
 }
