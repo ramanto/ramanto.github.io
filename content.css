@@ -3,3 +3,16 @@
   margin-right: 5%;
   text-align: justify;
 }
+.content div {
+  max-width: 500px;
+  height: 600px;
+  margin: 0 auto;
+}
+.content h1 {
+  font-size: 95px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(185, 44, 44, 0.541);
+}
