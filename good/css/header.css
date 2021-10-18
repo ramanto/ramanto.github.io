@@ -25,11 +25,11 @@ a {
   padding-top: 13px;
 }
 .mainMenu .logo {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 .mainMenu .logo a {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   color: #000000;
 }
 .mainMenu .left {
@@ -40,11 +40,11 @@ a {
 }
 .mainMenu ul li {
   list-style: none;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .mainMenu ul li a {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   padding-bottom: 5px;
   color: #333;
