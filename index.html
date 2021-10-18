@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="portofolio and everything" />
-    <meta name="Ramanto" content="ramanto" />
+    <meta name="description" content="Portfolio and Everything" />
+    <meta name="description" content="Ramanto | site" />
+    <meta name="keywords" content="ramanto" />
+    <meta name="keywords" content="ramanto.github.io" />
     <title>Ramanto | Site</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="content.css" />
-    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="good/css/styles.css" />
+    <link rel="shortcut icon" href="000/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="000/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="good/css/content.css" />
+    <link rel="stylesheet" href="good/css/header.css" />
+    <link rel="stylesheet" href="good/css/main.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.js" />
     <style>
       .sticky {
         position: sticky;
@@ -61,48 +65,50 @@
       <div class="sTop menu">
         <div class="mainMenu">
           <div class="left">
-            <div class="side">
-              <div
-                class="w3-sidebar w3-light-grey w3-bar-block"
-                style="display: none; z-index: 5"
-                id="mySidebar"
-              >
-                <button
-                  class="w3-bar-item w3-button w3-xxlarge"
-                  onclick="w3_close()"
-                >
-                  Close &times;
-                </button>
-                <a href="#" class="w3-bar-item w3-button">About Me</a>
-                <button
-                  class="w3-button w3-block w3-left-align"
-                  onclick="myAccFunc()"
-                >
-                  <a href="#">More <i class="fa fa-caret-down"></i></a>
-                </button>
-                <div id="demoAcc" class="w3-hide w3-white w3-card">
-                  <a href="#" class="w3-bar-item w3-button">Tutorial</a>
-                  <a href="#" class="w3-bar-item w3-button">Archive</a>
-                </div>
-                <a href="#" class="w3-bar-item w3-button">Get</a>
-              </div>
-
-              <!-- Page Content -->
-              <div
-                class="w3-overlay"
+            <div
+              class="w3-sidebar w3-animate-left w3-bar-block"
+              style="font-size: 20px; display: none; z-index: 5"
+              id="mySidebar"
+            >
+              <button
+                class="w3-bar-item w3-button w3-xxlarge"
                 onclick="w3_close()"
-                style="cursor: pointer"
-                id="myOverlay"
-              ></div>
-
-              <div>
-                <button
-                  class="w3-button w3-hide-large w3-hide-medium"
-                  onclick="w3_open()"
-                >
-                  &#9776;
-                </button>
+              >
+                Close &times;
+              </button>
+              <a href="#" class="w3-bar-item w3-button">About Me</a>
+              <button
+                class="w3-button w3-block w3-left-align"
+                onclick="myAccFunc()"
+              >
+                <a href="#">More <i class="fa fa-caret-down w3-right"></i></a>
+              </button>
+              <div
+                id="demoAcc"
+                class="w3-hide w3-white w3-card"
+                style="text-indent: 20px"
+              >
+                <a href="#" class="w3-bar-item w3-button">Tutorial</a>
+                <a href="#" class="w3-bar-item w3-button">Archive</a>
               </div>
+              <a href="#" class="w3-bar-item w3-button">Get</a>
+            </div>
+
+            <!-- Page Content -->
+            <div
+              class="w3-overlay"
+              onclick="w3_close()"
+              style="cursor: pointer"
+              id="myOverlay"
+            ></div>
+
+            <div>
+              <button
+                class="w3-button w3-hide-large w3-hide-medium"
+                onclick="w3_open()"
+              >
+                &#9776;
+              </button>
             </div>
             <div class="logo">
               <a href="#">Ramanto Ne leh</a>
@@ -123,7 +129,92 @@
                 </li>
               </ul>
             </li>
-            <li><a href="#">Log In</a></li>
+            <li>
+              <a
+                href="#?login.php"
+                onclick="document.getElementById('id01').style.display='block'"
+                class="login"
+              >
+                Log in
+              </a>
+
+              <div id="id01" class="w3-modal">
+                <div
+                  class="w3-modal-content w3-card-4 w3-animate-zoom"
+                  style="max-width: 600px"
+                >
+                  <div class="w3-center">
+                    <br />
+                    <span
+                      onclick="document.getElementById('id01').style.display='none'"
+                      class="
+                        w3-button w3-xlarge w3-hover-red w3-display-topright
+                      "
+                      title="Close Modal"
+                      >&times;</span
+                    >
+                    <img
+                      src="000/avatar.png"
+                      alt="Avatar"
+                      style="width: 30%"
+                      class="w3-circle w3-margin-top"
+                    />
+                  </div>
+
+                  <form class="w3-container" action="000/login.html">
+                    <div class="w3-section">
+                      <label><b>Username</b></label>
+                      <input
+                        class="w3-input w3-border w3-margin-bottom"
+                        type="text"
+                        placeholder="Enter Username"
+                        name="usrname"
+                        required
+                      />
+                      <label><b>Password</b></label>
+                      <input
+                        class="w3-input w3-border"
+                        type="password"
+                        placeholder="Enter Password"
+                        name="psw"
+                        required
+                      />
+                      <button
+                        class="
+                          w3-button w3-block w3-green w3-section w3-padding
+                        "
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                      <input
+                        class="w3-check w3-margin-top"
+                        type="checkbox"
+                        checked="checked"
+                      />
+                      Remember me
+                    </div>
+                  </form>
+
+                  <div
+                    class="
+                      w3-container w3-border-top w3-padding-16 w3-light-grey
+                    "
+                  >
+                    <button
+                      onclick="document.getElementById('id01').style.display='none'"
+                      type="button"
+                      class="w3-button w3-red"
+                    >
+                      Cancel
+                    </button>
+                    <span class="w3-right w3-padding w3-hide-small"
+                      >Forgot <a href="#">password?</a></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -133,7 +224,7 @@
     <!--navbar subMenu-->
 
     <nav class="subMenu sticky">
-      <div class="w3-bar" style="background-color: #e7e7e7">
+      <div class="w3-bar" style="font-size: 18px; background-color: #e7e7e7">
         <a href="#sTop" class="w3-bar-item w3-button">Home</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small">Web</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small">Blog</a>
@@ -199,49 +290,7 @@
 
     <!--javascript-->
 
-    <script>
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-      }
-
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-      }
-      function myAccFunc() {
-        var x = document.getElementById("demoAcc");
-        if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-          x.previousElementSibling.className += " w3-green";
-        } else {
-          x.className = x.className.replace(" w3-show", "");
-          x.previousElementSibling.className =
-            x.previousElementSibling.className.replace(" w3-green", "");
-        }
-      }
-    </script>
-
-    <script src="js/search.js"></script>
-    <script>
-      function myFunction0() {
-        var x = document.getElementById("icon");
-        if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-        } else {
-          x.className = x.className.replace(" w3-show", "");
-        }
-      }
-    </script>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("demo");
-        if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-        } else {
-          x.className = x.className.replace(" w3-show", "");
-        }
-      }
-    </script>
+    <script src="brain/js/main.js"></script>
+    <script src="brain/js/search.js"></script>
   </body>
 </html>

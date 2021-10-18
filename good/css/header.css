@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
+}
+header {
+  background-color: rgba(255, 255, 255, 0.411);
+}
+.menu {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+
+.mainMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  padding-bottom: 13px;
+  padding-top: 13px;
+}
+.mainMenu .logo {
+  padding: 0 20px;
+}
+.mainMenu .logo a {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+}
+.mainMenu .left {
+  display: flex;
+}
+.mainMenu ul {
+  display: flex;
+}
+.mainMenu ul li {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.mainMenu ul li a {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  color: #333;
+  border-bottom: 2px transparent;
+  transition: 0.5s all;
+}
+.mainMenu ul li a:hover {
+  border-bottom: 5px solid #e7e7e7;
+}
+/*
+.left div div li {
+  list-style: none;
+  display: inline;
+  padding-bottom: 5px;
+}
+
+.left div div li a {
+  font-weight: 600;
+  margin-left: 8px;
+  color: #333;
+  border-bottom: 2px transparent;
+  transition: 0.5s all;
+}
+.left div div li a:hover {
+  border-bottom: 5px solid #e7e7e7;
+}
+.left div div li ul {
+  background-color: #fff;
+  z-index: 99999;
+  position: absolute;
+  left: -999em;
+  display: inline-block;
+  padding-top: 5px;
+}
+.left div div li ul li {
+  padding: 0;
+}
+.left div div li:hover ul {
+  left: auto;
+}
+*/
+.mainMenu ul ul {
+  background-color: #fff;
+  z-index: 99999;
+  position: absolute;
+  left: -999em;
+  display: block;
+  padding-top: 5px;
+}
+.mainMenu ul ul li {
+  padding: 0;
+}
+.mainMenu ul li:hover ul {
+  left: auto;
+}
