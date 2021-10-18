@@ -61,29 +61,47 @@
       <div class="sTop menu">
         <div class="mainMenu">
           <div class="left">
-            <div>
-              <a
-                href="javascript:void(0)"
-                class="
-                  buttonMenu
-                  w3-button w3-bar-item w3-hide-large w3-hide-medium
-                "
-                onclick="myFunction0()"
-                >&#9777;</a
+            <div class="side">
+              <div
+                class="w3-sidebar w3-light-grey w3-bar-block"
+                style="display: none; z-index: 5"
+                id="mySidebar"
               >
-              <div id="icon" class="w3-hide w3-hide-large w3-hide-medium">
-                <li><a href="#" class="w3-bar-item">About Me</a></li>
-                <li>
-                  <a href="#" class="w3-bar-item">More</a>
-                  <ul class="w3-bar-block">
-                    <li>
-                      <a href="#blog" class="w3-bar-item w3-button">Tutorial</a>
-                    </li>
-                    <li>
-                      <a href="#sosmed" class="w3-bar-item w3-button">Sosmed</a>
-                    </li>
-                  </ul>
-                </li>
+                <button
+                  class="w3-bar-item w3-button w3-xxlarge"
+                  onclick="w3_close()"
+                >
+                  Close &times;
+                </button>
+                <a href="#" class="w3-bar-item w3-button">About Me</a>
+                <button
+                  class="w3-button w3-block w3-left-align"
+                  onclick="myAccFunc()"
+                >
+                  <a href="#">More <i class="fa fa-caret-down"></i></a>
+                </button>
+                <div id="demoAcc" class="w3-hide w3-white w3-card">
+                  <a href="#" class="w3-bar-item w3-button">Tutorial</a>
+                  <a href="#" class="w3-bar-item w3-button">Archive</a>
+                </div>
+                <a href="#" class="w3-bar-item w3-button">Get</a>
+              </div>
+
+              <!-- Page Content -->
+              <div
+                class="w3-overlay"
+                onclick="w3_close()"
+                style="cursor: pointer"
+                id="myOverlay"
+              ></div>
+
+              <div>
+                <button
+                  class="w3-button w3-hide-large w3-hide-medium"
+                  onclick="w3_open()"
+                >
+                  &#9776;
+                </button>
               </div>
             </div>
             <div class="logo">
@@ -93,7 +111,9 @@
           <ul>
             <li><a href="#" class="w3-hide-small">About Me</a></li>
             <li class="w3-hide-small">
-              <a href="#" class="w3-hide-small">More</a>
+              <a href="#" class="w3-hide-small"
+                >More <i class="fa fa-caret-down"></i
+              ></a>
               <ul class="w3-bar-block">
                 <li>
                   <a href="#blog" class="w3-bar-item w3-button">Tutorial</a>
@@ -178,6 +198,29 @@
     <!--Akhir Content-->
 
     <!--javascript-->
+
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+      function myAccFunc() {
+        var x = document.getElementById("demoAcc");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+          x.previousElementSibling.className += " w3-green";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+          x.previousElementSibling.className =
+            x.previousElementSibling.className.replace(" w3-green", "");
+        }
+      }
+    </script>
 
     <script src="js/search.js"></script>
     <script>

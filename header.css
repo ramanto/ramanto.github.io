@@ -54,7 +54,7 @@ a {
 .mainMenu ul li a:hover {
   border-bottom: 5px solid #e7e7e7;
 }
-
+/*
 .left div div li {
   list-style: none;
   display: inline;
@@ -85,7 +85,7 @@ a {
 .left div div li:hover ul {
   left: auto;
 }
-
+*/
 .mainMenu ul ul {
   background-color: #fff;
   z-index: 99999;
