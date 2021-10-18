@@ -16,15 +16,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script src="js/jquery.smint.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $(".subMenu").smint({
-          scrollSpeed: 1000,
-        });
-      });
-    </script>
+    <style>
+      .sticky {
+        position: sticky;
+        top: 0;
+      }
+    </style>
+
     <style>
       .search #input {
         background-color: #fff;
@@ -114,8 +112,8 @@
 
     <!--navbar subMenu-->
 
-    <nav class="subMenu" style="z-index: 9999; right: 0">
-      <div class="w3-bar" style="overflow: hidden; background-color: #e7e7e7">
+    <nav class="subMenu sticky">
+      <div class="w3-bar" style="background-color: #e7e7e7">
         <a href="#sTop" class="w3-bar-item w3-button">Home</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small">Web</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small">Blog</a>
